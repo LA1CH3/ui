@@ -17,9 +17,19 @@
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/LA1CH3/ui"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=16.6.1",
@@ -61,10 +71,10 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": ">= 16.3.0"
   },
   "dependencies": {
     "@stitches/react": "^0.2.3"
-  }
+  },
+  "sideEffects": false
 }
