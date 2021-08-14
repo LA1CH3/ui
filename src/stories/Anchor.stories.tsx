@@ -7,9 +7,7 @@ export default {
 };
 
 export const Default = () => (
-  <Column padding="medium" justify="center" align="center">
-    <Anchor href="#">This is an anchor using default variants.</Anchor>
-  </Column>
+  <Anchor href="#">This is an anchor using default variants.</Anchor>
 );
 
 export const Colors = () => (

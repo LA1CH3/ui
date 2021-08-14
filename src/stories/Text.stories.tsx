@@ -9,13 +9,11 @@ export default {
 } as ComponentMeta<typeof Text>;
 
 export const Default = () => (
-  <Column width="100%" padding="medium" justify="center" align="center">
-    <Text>This is some text using default variants.</Text>
-  </Column>
+  <Text>This is some text using default variants.</Text>
 );
 
 export const Sizes = () => (
-  <Column width={"100%"} gap="large" align="center">
+  <Column width={"100%"} gap="large">
     <Text size="small">Small</Text>
     <Text size="baseline">Baseline</Text>
     <Text size="large">Large</Text>
@@ -25,7 +23,7 @@ export const Sizes = () => (
 );
 
 export const Weights = () => (
-  <Column width={"100%"} gap="large" align="center">
+  <Column width={"100%"} gap="large">
     <Text weight="light">Light</Text>
     <Text weight="baseline">Baseline</Text>
     <Text weight="semibold">Semibold</Text>

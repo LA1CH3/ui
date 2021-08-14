@@ -6,11 +6,7 @@ export default {
   title: "components/Button",
 };
 
-export const Default = () => (
-  <Row padding="medium" justify="center" align="center">
-    <Button>Default</Button>
-  </Row>
-);
+export const Default = () => <Button>Default</Button>;
 
 export const Colors = () => (
   <Row width="100%">

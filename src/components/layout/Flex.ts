@@ -1,4 +1,4 @@
-import { Box } from "./Box";
+import { Box } from "../box";
 import { styled } from "../../styled";
 
 export const Flex = styled(Box, {
@@ -74,5 +74,9 @@ export const Flex = styled(Box, {
         flexWrap: "nowrap",
       },
     },
+  },
+  defaultVariants: {
+    justify: "start",
+    align: "start",
   },
 });
