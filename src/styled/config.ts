@@ -12,4 +12,9 @@ export const { config, styled, css, global, keyframes, getCssString, theme } =
       radii,
       space,
     },
+    media: {
+      small: "(min-width: 400px)",
+      medium: "(min-width: 768px)",
+      large: "(min-width: 1024px)",
+    },
   });

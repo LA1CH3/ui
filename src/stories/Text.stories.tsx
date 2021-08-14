@@ -22,6 +22,18 @@ export const Sizes = () => (
   </Column>
 );
 
+export const ResponsiveSizes = () => (
+  <Text
+    size={{
+      "@small": "large",
+      "@medium": "huge",
+      "@large": "giant",
+    }}
+  >
+    Responsive Text
+  </Text>
+);
+
 export const Weights = () => (
   <Column width={"100%"} gap="large">
     <Text weight="light">Light</Text>

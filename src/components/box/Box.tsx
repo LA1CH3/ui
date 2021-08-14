@@ -4,6 +4,7 @@ import React, { ReactNode } from "react";
 import { styled } from "../../styled";
 
 export const BoxComponent = styled("div", {
+  borderRadius: "$small",
   variants: {
     padding: {
       small: {
@@ -30,7 +31,30 @@ export const BoxComponent = styled("div", {
         backgroundColor: "$ink0",
       },
     },
+    bordered: {
+      true: {
+        $$borderColor: "transparent",
+        border: "2px solid $$borderColor",
+      },
+      false: {},
+    },
   },
+  compoundVariants: [
+    {
+      fill: "light",
+      bordered: true,
+      css: {
+        $$borderColor: "$colors-ink100",
+      },
+    },
+    {
+      fill: "dark",
+      bordered: true,
+      css: {
+        $$borderColor: "$colors-ink0",
+      },
+    },
+  ],
 });
 
 export type BoxProps = {
@@ -40,6 +64,7 @@ export type BoxProps = {
 } & StitchesVariants<typeof BoxComponent>;
 
 export const Box = ({
+  bordered,
   width,
   height,
   padding,
@@ -48,6 +73,7 @@ export const Box = ({
   ...props
 }: BoxProps): JSX.Element => (
   <BoxComponent
+    bordered={bordered}
     padding={padding}
     fill={fill}
     css={{ width, height }}

@@ -57,3 +57,38 @@ export const Padding = () => (
     </Column>
   </Column>
 );
+
+export const ResponsivePadding = () => (
+  <Column>
+    <Box
+      fill="dark"
+      padding={{
+        initial: "small",
+        "@small": "medium",
+        "@medium": "large",
+        "@large": "huge",
+      }}
+    ></Box>
+  </Column>
+);
+
+export const Borders = () => (
+  <Row width="100%">
+    <Column width="50%" height="250px" justify="center" align="center">
+      <Box padding="medium" fill="light" bordered>
+        <Text>Light (Bordered)</Text>
+      </Box>
+    </Column>
+    <Column
+      fill="dark"
+      width="50%"
+      height="250px"
+      justify="center"
+      align="center"
+    >
+      <Box padding="medium" fill="dark" bordered>
+        <Text color="light">Dark (Bordered)</Text>
+      </Box>
+    </Column>
+  </Row>
+);

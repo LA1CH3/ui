@@ -30,3 +30,30 @@ export const Colors = () => (
     </Column>
   </Row>
 );
+
+export const Ghost = () => (
+  <Row width="100%">
+    <Column
+      width="50%"
+      height="250px"
+      fill="dark"
+      align="center"
+      justify="center"
+    >
+      <Button ghost color="light">
+        Light (Ghost)
+      </Button>
+    </Column>
+    <Column
+      width="50%"
+      height="250px"
+      fill="light"
+      align="center"
+      justify="center"
+    >
+      <Button ghost color="dark">
+        Dark (Ghost)
+      </Button>
+    </Column>
+  </Row>
+);

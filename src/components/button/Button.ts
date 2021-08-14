@@ -28,8 +28,42 @@ export const Button = styled("button", {
         },
       },
     },
+    ghost: {
+      true: {
+        $$ghostColor: "transparent",
+        $$ghostColorInteractive: "transparent",
+        backgroundColor: "transparent",
+        border: "2px solid $$ghostColor",
+        color: "$$ghostColor",
+        "&:hover,&:focus": {
+          backgroundColor: "transparent",
+          color: "$$ghostColorInteractive",
+          borderColor: "$$ghostColorInteractive",
+        },
+      },
+      false: {},
+    },
   },
+  compoundVariants: [
+    {
+      color: "light",
+      ghost: true,
+      css: {
+        $$ghostColor: "$colors-teal20",
+        $$ghostColorInteractive: "$colors-teal40",
+      },
+    },
+    {
+      color: "dark",
+      ghost: true,
+      css: {
+        $$ghostColor: "$colors-purple80",
+        $$ghostColorInteractive: "$colors-purple90",
+      },
+    },
+  ],
   defaultVariants: {
     color: "dark",
+    ghost: false,
   },
 });

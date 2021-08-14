@@ -51,10 +51,10 @@ export const Flex = styled(Box, {
     },
     align: {
       start: {
-        alignItems: "start",
+        alignItems: "flex-start",
       },
       end: {
-        alignItems: "end",
+        alignItems: "flex-end",
       },
       center: {
         alignItems: "center",

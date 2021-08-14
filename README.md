@@ -1,6 +1,6 @@
 # @la1ch3/ui
 
-Design system components for usage in `@la1ch3` projects.
+Design system components for usage in `@la1ch3` projects. Built using the excellent `@stitches/react` package.
 
 ## Installation
 
@@ -25,3 +25,5 @@ yarn storybook
 ```
 
 The local instance of storybook should open in your default browser. New stories can be added/modified in the `src/stories` folder.
+
+## Build
