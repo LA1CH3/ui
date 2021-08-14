@@ -1,41 +1,36 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button } from "./Button";
-
-import { Text } from "../components/text/Text";
+import { Column, Row, Button } from "../components";
 
 export default {
-  title: "Example/Button",
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
-} as ComponentMeta<typeof Button>;
-
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: "Button",
+  title: "components/Button",
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
+export const Default = () => (
+  <Row padding="medium" justify="center" align="center">
+    <Button>Default</Button>
+  </Row>
+);
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
-};
-
-export const Test = () => <Text size="giant">Test</Text>;
+export const Colors = () => (
+  <Row width="100%">
+    <Column
+      width="50%"
+      height="250px"
+      fill="dark"
+      align="center"
+      justify="center"
+    >
+      <Button color="light">Light</Button>
+    </Column>
+    <Column
+      width="50%"
+      height="250px"
+      fill="light"
+      align="center"
+      justify="center"
+    >
+      <Button color="dark">Dark</Button>
+    </Column>
+  </Row>
+);

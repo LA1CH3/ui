@@ -1,13 +1,15 @@
 import { createCss } from "@stitches/react";
 
-import { colors, fonts, fontSizes, space } from "../tokens";
+import { colors, fonts, fontSizes, fontWeights, radii, space } from "../tokens";
 
-export const { styled, css, global, keyframes, getCssString, theme } =
+export const { config, styled, css, global, keyframes, getCssString, theme } =
   createCss({
     theme: {
       colors,
       fonts,
       fontSizes,
+      fontWeights,
+      radii,
       space,
     },
   });

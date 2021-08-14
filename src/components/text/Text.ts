@@ -28,6 +28,23 @@ export const Text = styled("div", {
         color: "$ink0",
       },
     },
+    weight: {
+      light: {
+        fontWeight: "$light",
+      },
+      baseline: {
+        fontWeight: "$baseline",
+      },
+      semibold: {
+        fontWeight: "$semibold",
+      },
+      bold: {
+        fontWeight: "$bold",
+      },
+      heavy: {
+        fontWeight: "$heavy",
+      },
+    },
   },
   defaultVariants: {
     color: "dark",

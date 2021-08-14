@@ -7,4 +7,7 @@ export const colors = {
   purple80: "hsl(255,90%, 69%)",
   purple90: "hsl(255, 100%, 65%)",
   purple100: "hsl(255, 100%, 61%)",
+  teal20: "hsl(184, 100%, 55%)",
+  teal40: "hsl(184, 100%, 48%)",
+  teal60: "hsl(184, 100%, 45%)",
 };

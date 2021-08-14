@@ -1,6 +1,7 @@
+import { Box } from "./Box";
 import { styled } from "../../styled";
 
-export const Flex = styled("div", {
+export const Flex = styled(Box, {
   display: "flex",
   variants: {
     direction: {
