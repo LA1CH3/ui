@@ -1,6 +1,6 @@
 {
   "name": "@la1ch3/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "UI component library for usage within la1ch3 projects",
   "author": "Jay Laiche <jay@jaylaiche.com> (https://jaylaiche.com)",
   "license": "MIT",
@@ -32,12 +32,12 @@
   "scripts": {
     "lint": "eslint --fix",
     "postinstall": "husky install",
+    "prepublish": "yarn build",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup --config rollup.config.js",
-    "release": "np"
+    "build": "rollup --config rollup.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -60,7 +60,6 @@
     "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.1",
-    "np": "^7.5.0",
     "pinst": "^2.1.6",
     "prettier": "2.3.2",
     "react": "^17.0.2",
