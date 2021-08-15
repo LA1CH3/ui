@@ -4,6 +4,7 @@ import { Column, Row, Button } from "../components";
 
 export default {
   title: "components/Button",
+  component: Button,
 };
 
 export const Default = () => <Button>Default</Button>;

@@ -4,6 +4,7 @@ import { Anchor, Column, Row } from "../components";
 
 export default {
   title: "components/Anchor",
+  component: Anchor,
 };
 
 export const Default = () => (

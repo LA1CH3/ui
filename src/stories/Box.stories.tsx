@@ -4,6 +4,7 @@ import { Box, Column, Row, Text } from "../components";
 
 export default {
   title: "components/Box",
+  component: Box,
 };
 
 export const Fill = () => (
