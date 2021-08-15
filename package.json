@@ -10,6 +10,7 @@
     "design system",
     "components"
   ],
+  "homepage": "https://LA1CH3.github.io/ui/",
   "packageManager": "yarn@3.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -38,7 +39,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup --config rollup.config.js",
-    "publish-storybook": "storybook-to-ghpages"
+    "publish-storybook": "storybook-to-ghpages --source-branch main"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
