@@ -34,7 +34,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup --config rollup.config.js",
-    "publish-storybook": "yarn build && storybook-to-ghpages --source-branch main"
+    "publish-storybook": "yarn build && storybook-to-ghpages --source-branch main",
+    "release": "yarn build && yarn npm publish && yarn publish-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
