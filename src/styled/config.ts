@@ -1,6 +1,14 @@
 import { createCss } from "@stitches/react";
 
-import { colors, fonts, fontSizes, fontWeights, radii, space } from "../tokens";
+import {
+  colors,
+  fonts,
+  fontSizes,
+  fontWeights,
+  media,
+  radii,
+  space,
+} from "../tokens";
 
 export const { config, styled, css, global, keyframes, getCssString, theme } =
   createCss({
@@ -12,9 +20,5 @@ export const { config, styled, css, global, keyframes, getCssString, theme } =
       radii,
       space,
     },
-    media: {
-      small: "(min-width: 400px)",
-      medium: "(min-width: 768px)",
-      large: "(min-width: 1024px)",
-    },
+    media,
   });
