@@ -6,18 +6,23 @@ export const Text = styled("div", {
     size: {
       small: {
         fontSize: "$small",
+        lineHeight: "$small",
       },
       baseline: {
         fontSize: "$baseline",
+        lineHeight: "$baseline",
       },
       large: {
         fontSize: "$large",
+        lineHeight: "$large",
       },
       huge: {
         fontSize: "$huge",
+        lineHeight: "$huge",
       },
       giant: {
         fontSize: "$giant",
+        lineHeight: "$huge",
       },
     },
     color: {
