@@ -7,29 +7,11 @@ export const Anchor = styled("a", {
   "&:hover": {
     textDecoration: "underline",
   },
-  variants: {
-    color: {
-      light: {
-        color: "$teal20",
-        "&:hover,&:focus": {
-          color: "$teal40",
-        },
-        "&:active": {
-          color: "$teal60",
-        },
-      },
-      dark: {
-        color: "$purple80",
-        "&:hover,&:focus": {
-          color: "$purple90",
-        },
-        "&:active": {
-          color: "$purple100",
-        },
-      },
-    },
+  color: "$interactive",
+  "&:hover,&:focus": {
+    color: "$interactiveHover",
   },
-  defaultVariants: {
-    color: "dark",
+  "&:active": {
+    color: "$interactiveActive",
   },
 });

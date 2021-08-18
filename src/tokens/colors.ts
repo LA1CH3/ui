@@ -10,4 +10,17 @@ export const colors = {
   teal20: "hsl(184, 100%, 55%)",
   teal40: "hsl(184, 100%, 48%)",
   teal60: "hsl(184, 100%, 45%)",
+  textPrimary: "$ink100",
+  textPrimaryInverted: "$ink0",
+  interactive: "$purple80",
+  interactiveHover: "$purple90",
+  interactiveActive: "$purple100",
+};
+
+export const colorsDarkTheme = {
+  textPrimary: "$ink0",
+  textPrimaryInverted: "$ink100",
+  interactive: "$teal20",
+  interactiveHover: "$teal40",
+  interactiveActive: "$teal60",
 };

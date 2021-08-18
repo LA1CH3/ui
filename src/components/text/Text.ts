@@ -2,6 +2,7 @@ import { styled } from "../../styled";
 
 export const Text = styled("div", {
   fontFamily: "$primary",
+  color: "$textPrimary",
   variants: {
     size: {
       small: {
@@ -25,14 +26,6 @@ export const Text = styled("div", {
         lineHeight: "$huge",
       },
     },
-    color: {
-      dark: {
-        color: "$ink100",
-      },
-      light: {
-        color: "$ink0",
-      },
-    },
     weight: {
       light: {
         fontWeight: "$light",
@@ -52,7 +45,6 @@ export const Text = styled("div", {
     },
   },
   defaultVariants: {
-    color: "dark",
     size: "baseline",
   },
 });

@@ -2,6 +2,7 @@ import { createCss } from "@stitches/react";
 
 import {
   colors,
+  colorsDarkTheme,
   fonts,
   fontSizes,
   fontWeights,
@@ -24,3 +25,7 @@ export const { config, styled, css, global, keyframes, getCssString, theme } =
     },
     media,
   });
+
+export const darkTheme = theme({
+  colors: colorsDarkTheme,
+});

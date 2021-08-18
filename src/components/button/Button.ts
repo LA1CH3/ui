@@ -11,59 +11,24 @@ export const Button = styled("button", {
   fontWeight: "$semibold",
   padding: "$small",
   borderRadius: "$small",
+  backgroundColor: "$interactive",
+  color: "$textPrimaryInverted",
+  "&:hover,&:focus": {
+    backgroundColor: "$interactiveHover",
+  },
   variants: {
-    color: {
-      light: {
-        backgroundColor: "$teal20",
-        color: "$ink100",
-        "&:hover, &:focus": {
-          backgroundColor: "$teal40",
-        },
-      },
-      dark: {
-        backgroundColor: "$purple80",
-        color: "$ink0",
-        "&:hover, &:focus": {
-          backgroundColor: "$purple90",
-        },
-      },
-    },
     ghost: {
       true: {
-        $$ghostColor: "transparent",
-        $$ghostColorInteractive: "transparent",
         backgroundColor: "transparent",
-        border: "2px solid $$ghostColor",
-        color: "$$ghostColor",
+        border: "2px solid $interactive",
+        color: "$interactive",
         "&:hover,&:focus": {
           backgroundColor: "transparent",
-          color: "$$ghostColorInteractive",
-          borderColor: "$$ghostColorInteractive",
+          color: "$interactiveHover",
+          borderColor: "$interactiveHover",
         },
       },
       false: {},
     },
-  },
-  compoundVariants: [
-    {
-      color: "light",
-      ghost: true,
-      css: {
-        $$ghostColor: "$colors-teal20",
-        $$ghostColorInteractive: "$colors-teal40",
-      },
-    },
-    {
-      color: "dark",
-      ghost: true,
-      css: {
-        $$ghostColor: "$colors-purple80",
-        $$ghostColorInteractive: "$colors-purple90",
-      },
-    },
-  ],
-  defaultVariants: {
-    color: "dark",
-    ghost: false,
   },
 });

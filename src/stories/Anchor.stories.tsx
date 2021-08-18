@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Anchor, Column, Row } from "../components";
+import { darkTheme } from "../styled";
 
 export default {
   title: "components/Anchor",
@@ -20,9 +21,9 @@ export const Colors = () => (
       align="center"
       fill="dark"
     >
-      <Anchor color="light" href="#">
-        Light
-      </Anchor>
+      <div className={darkTheme}>
+        <Anchor href="#">Dark Mode</Anchor>
+      </div>
     </Column>
     <Column
       width="50%"
@@ -31,9 +32,7 @@ export const Colors = () => (
       align="center"
       fill="light"
     >
-      <Anchor color="dark" href="#">
-        Dark
-      </Anchor>
+      <Anchor href="#">Light Mode</Anchor>
     </Column>
   </Row>
 );

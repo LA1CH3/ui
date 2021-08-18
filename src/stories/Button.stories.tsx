@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Column, Row, Button } from "../components";
+import { darkTheme } from "../styled";
 
 export default {
   title: "components/Button",
@@ -18,7 +19,9 @@ export const Colors = () => (
       align="center"
       justify="center"
     >
-      <Button color="light">Light</Button>
+      <div className={darkTheme}>
+        <Button>Dark Mode</Button>
+      </div>
     </Column>
     <Column
       width="50%"
@@ -27,7 +30,7 @@ export const Colors = () => (
       align="center"
       justify="center"
     >
-      <Button color="dark">Dark</Button>
+      <Button>Light Mode</Button>
     </Column>
   </Row>
 );
@@ -41,9 +44,9 @@ export const Ghost = () => (
       align="center"
       justify="center"
     >
-      <Button ghost color="light">
-        Light (Ghost)
-      </Button>
+      <div className={darkTheme}>
+        <Button ghost>Dark Mode (Ghost)</Button>
+      </div>
     </Column>
     <Column
       width="50%"
@@ -52,9 +55,7 @@ export const Ghost = () => (
       align="center"
       justify="center"
     >
-      <Button ghost color="dark">
-        Dark (Ghost)
-      </Button>
+      <Button ghost>Light Mode (Ghost)</Button>
     </Column>
   </Row>
 );

@@ -2,6 +2,7 @@ import { ComponentMeta } from "@storybook/react";
 import React from "react";
 
 import { Text, Column, Row } from "../components";
+import { darkTheme } from "../styled";
 
 export default {
   title: "Components/Text",
@@ -53,7 +54,9 @@ export const Colors = () => (
       align="center"
       justify="center"
     >
-      <Text color="light">Light</Text>
+      <div className={darkTheme}>
+        <Text>Dark Mode</Text>
+      </div>
     </Column>
     <Column
       width="50%"
@@ -62,7 +65,7 @@ export const Colors = () => (
       align="center"
       justify="center"
     >
-      <Text color="dark">Dark</Text>
+      <Text>Light Mode</Text>
     </Column>
   </Row>
 );
