@@ -4,6 +4,7 @@ export const Anchor = styled("a", {
   fontFamily: "$primary",
   fontWeight: "$semibold",
   textDecoration: "none",
+  cursor: "pointer",
   "&:hover": {
     textDecoration: "underline",
   },

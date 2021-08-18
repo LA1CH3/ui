@@ -6,4 +6,5 @@ export const AppRoot = styled("div", {
   height: "100%",
   display: "flex",
   flexDirection: "column",
+  backgroundColor: "$textPrimaryInverted",
 });

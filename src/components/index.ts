@@ -3,6 +3,7 @@ export * from "./app-content";
 export * from "./app-root";
 export * from "./box";
 export * from "./button";
+export * from "./color-mode-provider";
 export * from "./divider";
 export * from "./list";
 export * from "./text";
