@@ -14,14 +14,13 @@ export const ColorModeProvider = ({
   mode,
   children,
 }: ColorModeProviderProps): JSX.Element => {
-  let savedMode: string | null = null;
-
-  useEffect(() => {
-    savedMode = window.localStorage.getItem(storageKey);
-  }, []);
+  const savedMode =
+    typeof window !== "undefined"
+      ? window.localStorage.getItem(storageKey)
+      : null;
 
   const [currentMode, setMode] = useState<ColorModeType>(
-    mode ?? savedMode ?? "light"
+    mode ?? (savedMode as ColorModeType) ?? "light"
   );
 
   const setModeAndSave = (mode: ColorModeType) => {
