@@ -24,9 +24,7 @@ export const ColorModeProvider = ({
   );
 
   const setModeAndSave = (mode: ColorModeType) => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(storageKey, mode);
-    }
+    window.localStorage.setItem(storageKey, mode);
 
     setMode(mode);
   };
@@ -40,6 +38,7 @@ export const ColorModeProvider = ({
   };
 
   useEffect(() => {
+    console.log(savedMode);
     if (
       !mode &&
       !savedMode &&
