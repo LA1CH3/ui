@@ -14,7 +14,7 @@ export const ColorModeProvider = ({
   mode,
   children,
 }: ColorModeProviderProps): JSX.Element => {
-  let savedMode;
+  let savedMode: string | null = null;
 
   useEffect(() => {
     savedMode = window.localStorage.getItem(storageKey);
@@ -43,6 +43,7 @@ export const ColorModeProvider = ({
   useEffect(() => {
     if (
       !mode &&
+      !savedMode &&
       currentMode !== "dark" &&
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
