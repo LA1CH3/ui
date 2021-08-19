@@ -14,14 +14,13 @@ export const ColorModeProvider = ({
   mode,
   children,
 }: ColorModeProviderProps): JSX.Element => {
-  const savedMode =
-    typeof window !== "undefined"
-      ? window.localStorage.getItem(storageKey)
-      : null;
+  const [currentMode, setMode] = useState<ColorModeType>(mode ?? "light");
 
-  const [currentMode, setMode] = useState<ColorModeType>(
-    mode ?? (savedMode as ColorModeType) ?? "light"
-  );
+  useEffect(() => {
+    if (window.localStorage.getItem(storageKey)) {
+      setMode(window.localStorage.getItem(storageKey) as ColorModeType);
+    }
+  }, []);
 
   const setModeAndSave = (mode: ColorModeType) => {
     window.localStorage.setItem(storageKey, mode);
@@ -38,10 +37,11 @@ export const ColorModeProvider = ({
   };
 
   useEffect(() => {
-    console.log(savedMode);
+    const hasModeInStorage = !!window.localStorage.getItem(storageKey);
+
     if (
       !mode &&
-      !savedMode &&
+      !hasModeInStorage &&
       currentMode !== "dark" &&
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
