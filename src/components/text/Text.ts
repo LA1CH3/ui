@@ -13,6 +13,10 @@ export const Text = styled("div", {
         fontSize: "$baseline",
         lineHeight: "$baseline",
       },
+      medium: {
+        fontSize: "$medium",
+        lineHeight: "$baseline",
+      },
       large: {
         fontSize: "$large",
         lineHeight: "$large",
