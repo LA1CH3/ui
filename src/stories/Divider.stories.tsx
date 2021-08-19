@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Row, Column, Text, Divider } from "../components";
+import { darkTheme } from "../styled";
 
 export default {
   title: "components/Divider",
@@ -25,9 +26,11 @@ export const Colors = () => (
       align="center"
       padding="medium"
     >
-      <Text color="light">Above</Text>
-      <Divider color="light" />
-      <Text color="light">Below</Text>
+      <div className={darkTheme} style={{ width: "100%", textAlign: "center" }}>
+        <Text>Above</Text>
+        <Divider />
+        <Text>Below</Text>
+      </div>
     </Column>
     <Column
       fill="light"
