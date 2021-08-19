@@ -10,6 +10,7 @@ export type OrderedListProps = Pick<StitchesVariants<typeof Column>, "gap"> & {
 
 const orderedListStyles = {
   fontFamily: "$primary",
+  color: "$textPrimary",
   paddingLeft: "$medium",
   margin: 0,
   listStyleType: "numeric",

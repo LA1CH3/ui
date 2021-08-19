@@ -13,6 +13,7 @@ export type UnorderedListProps = Pick<
 
 const unorderedListStyles = {
   fontFamily: "$primary",
+  color: "$textPrimary",
   paddingLeft: "$medium",
   margin: 0,
   listStyleType: "disc",
