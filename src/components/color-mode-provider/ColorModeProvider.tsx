@@ -8,27 +8,39 @@ export type ColorModeProviderProps = {
   children: ReactNode;
 };
 
+const storageKey = "colorMode";
+
 export const ColorModeProvider = ({
   mode,
   children,
 }: ColorModeProviderProps): JSX.Element => {
-  const [currentMode, setMode] = useState<ColorModeType>(mode ?? "light");
+  const savedMode = window.localStorage.getItem(storageKey);
+
+  const [currentMode, setMode] = useState<ColorModeType>(
+    mode ?? (savedMode as ColorModeType) ?? "light"
+  );
+
+  const setModeAndSave = (mode: ColorModeType) => {
+    window.localStorage.setItem(storageKey, mode);
+    setMode(mode);
+  };
 
   const toggleMode = () => {
     if (currentMode === "light") {
-      setMode("dark");
+      setModeAndSave("dark");
     } else {
-      setMode("light");
+      setModeAndSave("light");
     }
   };
 
   useEffect(() => {
     if (
       !mode &&
+      currentMode !== "dark" &&
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      setMode("dark");
+      setModeAndSave("dark");
     }
   }, []);
 
