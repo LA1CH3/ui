@@ -24,9 +24,6 @@ export const globalStyles = global({
   "*[hidden]": {
     display: "none",
   },
-  body: {
-    lineHeight: "1",
-  },
   "ol, ul": {
     listStyle: "none",
   },
