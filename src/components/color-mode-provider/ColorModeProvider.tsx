@@ -52,7 +52,7 @@ export const ColorModeProvider = ({
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      setModeAndSave("dark");
+      setMode("dark");
     }
   }, [mounted]);
 
