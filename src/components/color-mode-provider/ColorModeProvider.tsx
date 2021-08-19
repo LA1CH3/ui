@@ -15,12 +15,17 @@ export const ColorModeProvider = ({
   children,
 }: ColorModeProviderProps): JSX.Element => {
   const [currentMode, setMode] = useState<ColorModeType>(mode ?? "light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (window.localStorage.getItem(storageKey)) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && window.localStorage.getItem(storageKey)) {
       setMode(window.localStorage.getItem(storageKey) as ColorModeType);
     }
-  }, []);
+  }, [mounted]);
 
   const setModeAndSave = (mode: ColorModeType) => {
     window.localStorage.setItem(storageKey, mode);
@@ -40,6 +45,7 @@ export const ColorModeProvider = ({
     const hasModeInStorage = !!window.localStorage.getItem(storageKey);
 
     if (
+      mounted &&
       !mode &&
       !hasModeInStorage &&
       currentMode !== "dark" &&
@@ -48,13 +54,16 @@ export const ColorModeProvider = ({
     ) {
       setModeAndSave("dark");
     }
-  }, []);
+  }, [mounted]);
 
   const state: [ColorModeType, () => void] = [currentMode, toggleMode];
 
   return (
     <ColorModeContext.Provider value={state}>
-      <div className={currentMode === "dark" ? darkTheme : undefined}>
+      <div
+        className={currentMode === "dark" ? darkTheme : undefined}
+        style={{ visibility: !mounted ? "hidden" : "visible" }}
+      >
         {children}
       </div>
     </ColorModeContext.Provider>
