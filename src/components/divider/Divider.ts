@@ -5,4 +5,5 @@ export const Divider = styled("hr", {
   borderStyle: "none",
   height: "2px",
   backgroundColor: "$textPrimary",
+  transition: "$color",
 });
