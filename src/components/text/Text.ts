@@ -3,6 +3,7 @@ import { styled } from "../../styled";
 export const Text = styled("div", {
   fontFamily: "$primary",
   color: "$textPrimary",
+  transition: "$color",
   variants: {
     size: {
       small: {

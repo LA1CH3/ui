@@ -6,3 +6,4 @@ export * from "./line-height";
 export * from "./media";
 export * from "./radii";
 export * from "./spacing";
+export * from "./transitions";

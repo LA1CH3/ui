@@ -13,6 +13,7 @@ export const Button = styled("button", {
   borderRadius: "$small",
   backgroundColor: "$interactive",
   color: "$textPrimaryInverted",
+  transition: "$allColors",
   "&:hover,&:focus": {
     backgroundColor: "$interactiveHover",
   },

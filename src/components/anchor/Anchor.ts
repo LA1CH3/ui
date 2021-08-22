@@ -9,6 +9,7 @@ export const Anchor = styled("a", {
     textDecoration: "underline",
   },
   color: "$interactive",
+  transition: "$color",
   "&:hover,&:focus": {
     color: "$interactiveHover",
   },

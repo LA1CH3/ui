@@ -7,4 +7,5 @@ export const AppRoot = styled("div", {
   display: "flex",
   flexDirection: "column",
   backgroundColor: "$textPrimaryInverted",
+  transition: "$backgroundColor",
 });

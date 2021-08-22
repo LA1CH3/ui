@@ -10,6 +10,7 @@ import {
   media,
   radii,
   space,
+  transitions,
 } from "../tokens";
 
 export const { config, styled, css, global, keyframes, getCssString, theme } =
@@ -22,6 +23,7 @@ export const { config, styled, css, global, keyframes, getCssString, theme } =
       lineHeights,
       radii,
       space,
+      transitions,
     },
     media,
   });
